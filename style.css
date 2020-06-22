@@ -2,3 +2,33 @@ body {
   font-size: 18px;
   font-family: 'Rubik';
 }
+
+button {
+  background-color: hsl(231, 69%, 60%);
+  font-weight: 600;
+  border:solid 2px #fff;
+  border-radius: 6px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  /* transition-duration: 0.4s; */
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fff;
+  color:hsl(231, 69%, 60%);
+  border:solid 2px hsl(231, 69%, 60%);
+}
+.login-button {
+  background-color:hsl(0, 94%, 66%);
+}
+.login-button:hover {
+  background-color: #fff;
+  color:hsl(0, 94%, 66%);
+  border:solid 2px hsl(0, 94%, 66%);
+}

@@ -1,21 +1,246 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   font-size: 18px;
   font-family: 'Rubik';
 }
 
+main {
+  position: relative;
+}
+.container {
+  padding-top: 100px;
+}
+
+a {
+  color: #fff;
+}
+
+/* SVG-BOOKMARK */
+circle, #text {
+  fill: #fff;
+}
+
+path {
+  fill: #000;
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.hero-text {
+  width: 50%;
+  margin-left: 40px;
+  margin-right: 40px;
+  letter-spacing: 1px;
+}
+.header-buttons {
+  display:flex;
+  margin-top: 40px;
+}
+
+.firefox {
+  background: whitesmoke;
+  color: black;
+  margin-left: 20px;
+  -webkit-box-shadow: -6px 5px 5px -5px rgba(242,242,242,1);
+  -moz-box-shadow: -6px 5px 5px -5px rgba(242,242,242,1);
+  box-shadow: -6px 5px 5px -5px rgba(242,242,242,1);
+}
+.hero-img {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.hero-img img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.blue-rounded{
+  height: 18%;
+  width: 30%;
+  background: hsl(231, 69%, 60%);
+  border-bottom-left-radius: 40%;
+  border-top-left-radius: 40%;
+  position: absolute;
+}
+
+
+
+/* header */
+
+.header {
+  background-color: hsla(229, 31%, 21%, 0.952);
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+.open .header {
+  background-color: white;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header li a {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  border-bottom: white solid 0.5px;
+  margin: 0px 25px;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  text-align: center;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+/* SVG-BOOKMARK */
+circle {
+  fill: #5267DF;
+}
+path {
+  fill: #fff;
+}
+#text {
+    fill: #242A45;
+}
+
+a {
+  color: black;
+}
+
+  .header, .logo {
+    padding: 10px 40px;
+    background-color: white;
+  }
+  .header li {
+    float: left;
+    color: #000;
+  }
+  .header li a {
+    padding: 20px 30px;
+    border-bottom: none;
+    margin: 0;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    /* background-color: transparent; */
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  .header li a:hover,
+  .header .menu-btn:hover {
+  color: hsl(0, 94%, 66%);
+}
+}
+
 button {
   background-color: hsl(231, 69%, 60%);
-  font-weight: 600;
-  border:solid 2px #fff;
+  letter-spacing: 1.5px;
+  border: solid 2px rgba(255, 255, 255, 0);
   border-radius: 6px;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  /* transition-duration: 0.4s; */
   cursor: pointer;
 }
 
@@ -26,6 +251,7 @@ button:hover {
 }
 .login-button {
   background-color:hsl(0, 94%, 66%);
+  margin: 10px 15px;
 }
 .login-button:hover {
   background-color: #fff;

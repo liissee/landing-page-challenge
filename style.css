@@ -5,6 +5,8 @@
 body {
   font-size: 18px;
   font-family: 'Rubik';
+    line-height: 1.6;
+
 }
 
 main {
@@ -16,6 +18,7 @@ main {
 
 a {
   color: #fff;
+  text-decoration: none;
 }
 
 /* SVG-BOOKMARK */
@@ -26,50 +29,9 @@ circle, #text {
 path {
   fill: #000;
 }
-.hero-container {
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
+.content-text {
+  color: darkgrey;
 }
-.hero-text {
-  width: 50%;
-  margin-left: 40px;
-  margin-right: 40px;
-  letter-spacing: 1px;
-}
-.header-buttons {
-  display:flex;
-  margin-top: 40px;
-}
-
-.firefox {
-  background: whitesmoke;
-  color: black;
-  margin-left: 20px;
-  -webkit-box-shadow: -6px 5px 5px -5px rgba(242,242,242,1);
-  -moz-box-shadow: -6px 5px 5px -5px rgba(242,242,242,1);
-  box-shadow: -6px 5px 5px -5px rgba(242,242,242,1);
-}
-.hero-img {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-.hero-img img {
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-.blue-rounded{
-  height: 18%;
-  width: 30%;
-  background: hsl(231, 69%, 60%);
-  border-bottom-left-radius: 40%;
-  border-top-left-radius: 40%;
-  position: absolute;
-}
-
 
 
 /* header */
@@ -184,6 +146,119 @@ path {
   top: 0;
 }
 
+/* first section - Hero image and start text */
+.hero-container, .bookmark-container {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.hero-text, .bookmark-text {
+  width: 50%;
+  margin-left: 40px;
+  margin-right: 40px;
+  letter-spacing: 1px;
+}
+.header-buttons {
+  display:flex;
+  margin-top: 40px;
+}
+
+/* //Button "Get it on firefox" */
+.firefox {
+  background: whitesmoke;
+  color: black;
+  margin-left: 20px;
+  -webkit-box-shadow: -6px 5px 5px -5px rgba(242,242,242,1);
+  -moz-box-shadow: -6px 5px 5px -5px rgba(242,242,242,1);
+  box-shadow: -6px 5px 5px -5px rgba(242,242,242,1);
+}
+
+.hero-img, .bookmark-img {
+  /* width: 50%; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.bookmark-img {
+ justify-content: flex-start;
+}
+.hero-img img, .bookmark-img img {
+  width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.blue-rounded {
+  height: 300px;
+  width: 400px;
+  background: hsl(231, 69%, 60%);
+  border-bottom-left-radius: 40%;
+  border-top-left-radius: 40%;
+  position: absolute;
+}
+
+/* second section - features bookmark */
+.features-container {
+  margin: 40px;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.features-text {
+  width: 60%;
+}
+
+
+.blue-rounded2 {
+  /* height: 18%;
+  width: 30%; */
+  height: 300px;
+  width: 400px;
+  background: hsl(231, 69%, 60%);
+  border-bottom-right-radius: 40%;
+  border-top-right-radius: 40%;
+  position: absolute;
+}
+/*Tabs*/
+.tabs {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+.tabs input {
+  display: none;
+}
+.tabs label {
+  display: inline-block;
+  padding: 6px 0 6px 0;
+  margin: 0 -2px;
+  width: 25%; /* =100/tabs number */
+  border-bottom: 1px solid #f1f1f1;
+  text-align: center;
+  transition: 0.25s background ease;
+}
+.tabs label:hover {
+  cursor: pointer;
+}
+.tabs input:checked + label {
+  border: 2px solid hsl(0, 94%, 66%);
+  border-width: 0px 0px 3px 0px;
+  transition: 0.25s ease;
+}
+.tabs #tab1:checked ~ .content #content1,
+.tabs #tab2:checked ~ .content #content2,
+.tabs #tab3:checked ~ .content #content3 {
+  display: block;
+
+}
+.tabs .content > .tab-content {
+  display: none;
+  padding-top: 20px;
+  text-align: left;
+  /*height: 192px;*/
+  overflow: auto;
+}
 /* 48em = 768px */
 
 @media (min-width: 48em) {

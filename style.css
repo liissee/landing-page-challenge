@@ -31,6 +31,7 @@ path {
 }
 .content-text {
   color: darkgrey;
+  margin-bottom: 30px;
 }
 
 
@@ -151,6 +152,7 @@ path {
   display: flex;
   align-items: center;
   margin-top: 30px;
+  justify-content: space-between;
 }
 .hero-text, .bookmark-text {
   width: 50%;
@@ -173,19 +175,26 @@ path {
   box-shadow: -6px 5px 5px -5px rgba(242,242,242,1);
 }
 
-.hero-img, .bookmark-img {
+.hero-img, .tab-img {
   /* width: 50%; */
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.bookmark-img {
+.tab-img {
  justify-content: flex-start;
+ margin-left: 60px;
 }
-.hero-img img, .bookmark-img img {
-  width: 600px;
+.hero-img {
+  margin-right: 70px;
+}
+.hero-img img, .tab-img img {
+  width: 500px;
   position: relative;
   z-index: 1;
+}
+#content2 img, #content3 img{
+width: 450px;
 }
 
 .blue-rounded {
@@ -195,6 +204,7 @@ path {
   border-bottom-left-radius: 40%;
   border-top-left-radius: 40%;
   position: absolute;
+  right: 0;
 }
 
 /* second section - features bookmark */
@@ -220,6 +230,8 @@ path {
   border-bottom-right-radius: 40%;
   border-top-right-radius: 40%;
   position: absolute;
+  left: 0;
+
 }
 /*Tabs*/
 .tabs {
@@ -259,6 +271,29 @@ path {
   /*height: 192px;*/
   overflow: auto;
 }
+
+/* //card section */
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card {
+  margin: 20px;
+  padding: 10px;
+  border: solid 2px black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.logo{
+ width: 200px; 
+ height: 200px; 
+}
+
 /* 48em = 768px */
 
 @media (min-width: 48em) {

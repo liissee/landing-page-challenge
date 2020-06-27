@@ -19,3 +19,17 @@
 //   navButton.style = 'background-color: inherit; color: white; width: 80%; margin-top: 40px;';
 // }
 
+const acc = document.getElementsByClassName("question");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    const answer = this.nextElementSibling;
+    if (answer.style.maxHeight) {
+      answer.style.maxHeight = null;
+    } else {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    }
+  });
+}

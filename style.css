@@ -423,8 +423,8 @@ input {
 .footer-logos {
   margin-right: 40px;
 }
-.footer-logo {
-  padding: 0 10px;
+.footer-logos svg {
+  margin: 0 10px;
 }
 .text {
   fill: white;
@@ -434,6 +434,13 @@ input {
   display:flex;
   flex-direction: row;
   align-items: center;
+}
+.footer-text a:hover{
+  color:hsl(0, 94%, 66%);
+}
+
+#footer-logo:hover {
+  fill:hsl(0, 94%, 66%);
 }
 
 /* 48em = 768px */
@@ -509,4 +516,10 @@ button:hover {
   background-color: #fff;
   color:hsl(0, 94%, 66%);
   border:solid 2px hsl(0, 94%, 66%);
+}
+
+footer {
+background: hsl(229, 31%, 21%);
+font-size: 13px;
+color: white;
 }

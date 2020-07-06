@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style copy.css" />
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Bookmark landing page</title>
 </head>
@@ -65,6 +67,7 @@
 
 
         <div class="tabs">
+
           <input id="tab1" type="radio" name="tabs" checked>
           <label for="tab1">Simple Bookmarking</label>
           <input id="tab2" type="radio" name="tabs">
@@ -225,8 +228,10 @@
         <p>35,000+ already joined</p>
         <form>
           <h3 class="contact-text">Stay up-to-date with what we’re doing</h3>
-          <input type="email" placeholder="example@email.com"></input>
-          <button class="login-button" type="submit">Contact Us</button>
+          <div class="input-container">
+            <input type="email" placeholder="example@email.com"></input>
+            <button class="login-button" type="submit">Contact Us</button>
+          </div>
         </form>
       </section>
 

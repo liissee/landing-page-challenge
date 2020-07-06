@@ -1,0 +1,175 @@
+/* DESKTOP */
+/* 48em = 768px */
+/* 24 = 375px
+90 = 1440 */
+@media (min-width: 24em) {
+/* SVG-BOOKMARK */
+#circle {
+  fill: #5267DF;
+}
+#path {
+  fill: #fff;
+}
+#text {
+  fill: #242A45;
+}
+
+.menu a {
+  color: black;
+}
+
+.header, .logo {
+  padding: 10px 40px;
+  background-color: white;
+}
+.header li {
+  float: left;
+  color: #000;
+}
+.header li a {
+  padding: 20px 30px;
+  border-bottom: none;
+  margin: 0;
+}
+.header .menu {
+  clear: none;
+  float: right;
+  max-height: none;
+}
+.header .menu-icon {
+  display: none;
+}
+.header li a:hover,
+.header .menu-btn:hover {
+  color: hsl(0, 94%, 66%);
+}
+
+
+/* first section - Hero image and start text */
+.hero-container, .bookmark-container {
+  flex-direction: row;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+.hero-text, .bookmark-text {
+  width: 50%;
+  margin-left: 40px;
+  margin-right: 40px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+
+.tab-img {
+ margin-left: 60px;
+}
+.hero-img {
+  margin-right: 70px;
+}
+.hero-img img, .tab-img img {
+  width: 500px;
+}
+#content2 img, #content3 img{
+width: 450px;
+}
+
+.blue-rounded {
+  height: 300px;
+  width: 400px;
+}
+
+
+/* second section - features bookmark */
+.features-container, .extension-container {
+  margin: 40px;
+}
+
+.features-text, .extension-text{
+  width: 50%;
+}
+
+.blue-rounded2 {
+  height: 300px;
+  width: 400px;
+}
+
+/*Tabs*/
+ .tabs {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.tabs label {
+  display: inline-block;
+  width: 25%; /* =100/tabs number */
+ }
+
+/* //card section */
+.cards {
+  flex-direction: row;
+}
+#card2 {
+  margin-top: 100px;
+}
+#card3 {
+  margin-top: 200px;
+}
+.card {
+  min-height: 400px;
+}
+
+/* FAQ SECTION */
+
+.faq-content {
+  width: 50%;
+}
+
+.question {
+  padding: 18px;
+}
+
+.input-container {
+  display:flex;
+  flex-direction: row;
+}
+.input-container input {
+  width: 200px;
+  font-size: 16px;
+  padding: 10px;
+  color: black;
+  border-radius: 6px;
+}
+.footer-container{
+  flex-direction: row;
+  height: 100px;
+  padding: 10px;
+}
+
+.footer-container a {
+  margin: 0 10px;
+}
+.footer-links {
+  margin-left: 40px;
+  display:flex;
+  margin-top: 0px;
+  flex-direction: row;
+}
+.footer-logos {
+  margin-right: 40px;
+}
+.footer-logos svg {
+  margin: 0 10px;
+}
+
+.footer-text {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+button {
+  letter-spacing: 1.5px;
+  padding: 10px 40px;
+  font-size: 16px;
+}
+}

@@ -2,7 +2,7 @@
 /* 48em = 768px */
 /* 24 = 375px
 90 = 1440 */
-@media (min-width: 24em) {
+@media (min-width: 48em) {
 /* SVG-BOOKMARK */
 #circle {
   fill: #5267DF;
@@ -58,7 +58,6 @@
   letter-spacing: 1px;
   text-align: left;
 }
-
 
 .tab-img {
  margin-left: 60px;
